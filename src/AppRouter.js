@@ -16,7 +16,7 @@ const AppRouter = () => {
     <ThemeProvider>
       <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home}/>
